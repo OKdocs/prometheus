@@ -64,11 +64,12 @@ rate(xxx[time])
 ## examples
 
 ### status codes
-
+```
 sum(rate(status_metric[1m])) by (status) // status is vector name
-
+```
 ### latency histograms
-
+```
 histogram_quantile(0.99, sum(rate(latency_metric[1m])) by (le)) // le always
 histogram_quantile(0.90, sum(rate(latency_metric[1m])) by (le))
 histogram_quantile(0.50, sum(rate(latency_metric[1m])) by (le))
+```
